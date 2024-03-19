@@ -100,7 +100,7 @@ void xtouch_firmware_checkOnlineFirmwareUpdate(void)
                 xtouch_paths_firmware_ota_fw,
                 [](int progress)
                 {
-                    lv_label_set_text_fmt(introScreenCaption, LV_SYMBOL_CHARGE " Downloading Update %d%%", progress);
+                    lv_label_set_text_fmt(introScreenCaption, LV_SYMBOL_CHARGE " 正在下载升级包 %d%%", progress);
                     lv_timer_handler();
                     lv_task_handler();
                 },
@@ -109,13 +109,13 @@ void xtouch_firmware_checkOnlineFirmwareUpdate(void)
                     switch (state)
                     {
                     case -1:
-                        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " Verifying Update");
+                        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " 正在验证更新...");
                         break;
                     case 0:
-                        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " Invalid Update MD5");
+                        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " MD5验证失败");
                         break;
                     case 1:
-                        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " Update Verified");
+                        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " 验证成功");
                         break;
                     }
                     lv_timer_handler();
@@ -125,7 +125,7 @@ void xtouch_firmware_checkOnlineFirmwareUpdate(void)
 
             if (xtouch_firmware_hasFirmwareUpdate)
             {
-                lv_label_set_text(introScreenCaption, LV_SYMBOL_OK " Update downloaded");
+                lv_label_set_text(introScreenCaption, LV_SYMBOL_OK " 更新下载完成");
                 lv_timer_handler();
                 lv_task_handler();
                 delay(3000);
@@ -133,7 +133,7 @@ void xtouch_firmware_checkOnlineFirmwareUpdate(void)
             }
             else
             {
-                lv_label_set_text_fmt(introScreenCaption, LV_SYMBOL_WARNING " Failed to download update. Retry (%d/%d)", xtouch_firmware_updateDownloadRetries + 1, XTOUCH_FIRMWARE_DOWNLOAD_RETRIES);
+                lv_label_set_text_fmt(introScreenCaption, LV_SYMBOL_WARNING " 更新下载失败. 重试 (%d/%d)", xtouch_firmware_updateDownloadRetries + 1, XTOUCH_FIRMWARE_DOWNLOAD_RETRIES);
                 lv_timer_handler();
                 lv_task_handler();
                 delay(32);
@@ -164,7 +164,7 @@ void xtouch_firmware_checkOnlineFirmwareUpdate(void)
     }
     else
     {
-        lv_label_set_text(introScreenCaption, LV_SYMBOL_WARNING " Failed to download update");
+        lv_label_set_text(introScreenCaption, LV_SYMBOL_WARNING " 更新下载失败");
         lv_timer_handler();
         lv_task_handler();
         delay(3000);
@@ -190,17 +190,17 @@ void xtouch_firmware_checkFirmwareUpdate(void)
 
         if (updateSucceeded)
         {
-            lv_label_set_text(introScreenCaption, LV_SYMBOL_OK " Update finished");
+            lv_label_set_text(introScreenCaption, LV_SYMBOL_OK " 更新完成");
             lv_timer_handler();
             lv_task_handler();
         }
         else
         {
-            lv_label_set_text(introScreenCaption, LV_SYMBOL_WARNING " Update error");
+            lv_label_set_text(introScreenCaption, LV_SYMBOL_WARNING " 更新失败");
             lv_timer_handler();
             lv_task_handler();
             delay(3000);
-            lv_label_set_text(introScreenCaption, LV_SYMBOL_TRASH " Deleting firmware file");
+            lv_label_set_text(introScreenCaption, LV_SYMBOL_TRASH " 正在删除固件...");
             lv_timer_handler();
             lv_task_handler();
         }

@@ -61,10 +61,15 @@ void setup()
   xtouch_firmware_checkOnlineFirmwareUpdate();
 
   xtouch_screen_setupScreenTimer();
+
   xtouch_setupGlobalEvents();
+
   xtouch_pair_check();
+
   xtouch_mqtt_setup();
+
   xtouch_chamber_timer_init();
+
 }
 
 void loop()

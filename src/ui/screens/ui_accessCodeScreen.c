@@ -66,7 +66,7 @@ void ui_accessCodeScreen_screen_init(void)
     lv_obj_set_height(ui_accessCodeInput, LV_SIZE_CONTENT); /// 48
     lv_obj_set_x(ui_accessCodeInput, 0);
     lv_obj_set_y(ui_accessCodeInput, 0);
-    lv_textarea_set_placeholder_text(ui_accessCodeInput, "Enter Access Code");
+    lv_textarea_set_placeholder_text(ui_accessCodeInput, "输入连接认证码");
     lv_textarea_set_one_line(ui_accessCodeInput, true);
     lv_obj_add_flag(ui_accessCodeInput, LV_OBJ_FLAG_FLOATING);                                 /// Flags
     lv_obj_clear_flag(ui_accessCodeInput, LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE); /// Flags

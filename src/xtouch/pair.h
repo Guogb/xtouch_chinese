@@ -37,11 +37,17 @@ void xtouch_pair_start()
 
 void xtouch_pair_init()
 {
+
     xtouch_ssdp_start();
+
     xtouch_pair_start();
+
     loadScreen(-1);
+
     xtouch_ssdp_stop();
+
     xtouch_ssdp_save_pair(xTouchConfig.xTouchSerialNumber, xTouchConfig.xTouchAccessCode);
+
 }
 
 bool xtouch_pair_isPortAlive(const char *host, int port)
@@ -71,8 +77,10 @@ bool xtouch_pair_checkPrinterPorts(const char *host, const int *ports, int numPo
 
 void xtouch_pair_check()
 {
+
     if (!xtouch_ssdp_is_paired())
     {
+
         xtouch_pair_init();
     }
 

@@ -82,6 +82,7 @@ extern "C"
   LV_FONT_DECLARE(ui_font_xlcd);
   LV_FONT_DECLARE(ui_font_xlcdmin);
   LV_FONT_DECLARE(ui_font_xperiments);
+  LV_FONT_DECLARE(ui_font_chinese_14);
 
   void ui_init(void);
 

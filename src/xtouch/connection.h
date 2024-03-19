@@ -6,7 +6,7 @@ bool xtouch_wifi_setup()
     DynamicJsonDocument wifiConfig = xtouch_filesystem_readJson(SD, xtouch_paths_wifi);
     if (wifiConfig.isNull() || !wifiConfig.containsKey("ssid") || !wifiConfig.containsKey("pwd"))
     {
-        lv_label_set_text(introScreenCaption, wifiConfig.isNull() ? LV_SYMBOL_SD_CARD " Missing wifi.json" : LV_SYMBOL_WARNING " Inaccurate wifi.json");
+        lv_label_set_text(introScreenCaption, wifiConfig.isNull() ? LV_SYMBOL_SD_CARD " wifi.json 不存在" : LV_SYMBOL_WARNING " wifi.json 格式错误");
         lv_obj_set_style_text_color(introScreenCaption, lv_color_hex(0xFF0000), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_timer_handler();
         lv_task_handler();
@@ -20,7 +20,7 @@ bool xtouch_wifi_setup()
     WiFi.begin(ssid, password);
     ConsoleInfo.println(F("[XTOUCH][CONNECTION] Connecting to WiFi .."));
 
-    lv_label_set_text(introScreenCaption, LV_SYMBOL_WIFI " Connecting");
+    lv_label_set_text(introScreenCaption, LV_SYMBOL_WIFI " 正在连接...");
     lv_obj_set_style_text_color(introScreenCaption, lv_color_hex(0x555555), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_timer_handler();
     lv_task_handler();
@@ -37,12 +37,12 @@ bool xtouch_wifi_setup()
         switch (status)
         {
         case WL_IDLE_STATUS:
-            statusText = LV_SYMBOL_WIFI " Connecting";
+            statusText = LV_SYMBOL_WIFI " 正在连接...";
             statusColor = lv_color_hex(0x555555);
             break;
 
         case WL_NO_SSID_AVAIL:
-            statusText = LV_SYMBOL_WARNING " Bad SSID Check WiFi credentials";
+            statusText = LV_SYMBOL_WARNING " SSID 错误";
             statusColor = lv_color_hex(0xff0000);
             reboot = true;
             break;
@@ -52,7 +52,7 @@ bool xtouch_wifi_setup()
 
         case WL_CONNECT_FAILED:
         case WL_DISCONNECTED:
-            statusText = LV_SYMBOL_WARNING " Check your WiFi credentials";
+            statusText = LV_SYMBOL_WARNING " 请检查 WiFi 凭据";
             statusColor = lv_color_hex(0xff0000);
             reboot = true;
             break;
@@ -74,18 +74,18 @@ bool xtouch_wifi_setup()
         if (reboot)
         {
             delay(3000);
-            lv_label_set_text(introScreenCaption, LV_SYMBOL_REFRESH " REBOOTING");
+            lv_label_set_text(introScreenCaption, LV_SYMBOL_REFRESH " 重启中");
             lv_timer_handler();
             lv_task_handler();
             ESP.restart();
         }
         status = WiFi.status();
-    }
+    }          
 
     WiFi.setTxPower(WIFI_POWER_19_5dBm); // https://github.com/G6EJD/ESP32-8266-Adjust-WiFi-RF-Power-Output/blob/main/README.md
 
     delay(1000);
-    lv_label_set_text(introScreenCaption, LV_SYMBOL_WIFI " Connected");
+    lv_label_set_text(introScreenCaption, LV_SYMBOL_WIFI " 已连接");
     lv_timer_handler();
     lv_task_handler();
     delay(1000);

@@ -79,7 +79,7 @@ lv_obj_t *ui_confirmPanel_create(lv_obj_t *comp_parent)
     cui_confirmPanelCaption = lv_label_create(cui_confirmPanelContainer);
     lv_obj_set_width(cui_confirmPanelCaption, lv_pct(100));      /// 1
     lv_obj_set_height(cui_confirmPanelCaption, LV_SIZE_CONTENT); /// 1
-    lv_label_set_text(cui_confirmPanelCaption, "Are you sure?");
+    lv_label_set_text(cui_confirmPanelCaption, "确定?");
     lv_obj_clear_flag(cui_confirmPanelCaption, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_confirmPanelCaption, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_pad_left(cui_confirmPanelCaption, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -111,10 +111,10 @@ lv_obj_t *ui_confirmPanel_create(lv_obj_t *comp_parent)
     cui_confirmPanelNOLabel = lv_label_create(cui_confirmPanelNO);
     lv_obj_set_width(cui_confirmPanelNOLabel, LV_SIZE_CONTENT);  /// 1
     lv_obj_set_height(cui_confirmPanelNOLabel, LV_SIZE_CONTENT); /// 1
-    lv_label_set_text(cui_confirmPanelNOLabel, "NO");
+    lv_label_set_text(cui_confirmPanelNOLabel, "否");
     lv_obj_clear_flag(cui_confirmPanelNOLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_confirmPanelNOLabel, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(cui_confirmPanelNOLabel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_confirmPanelNOLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_confirmPanelYES;
     cui_confirmPanelYES = lv_label_create(cui_confirmPanelContainer);
@@ -140,10 +140,10 @@ lv_obj_t *ui_confirmPanel_create(lv_obj_t *comp_parent)
     cui_confirmPanelYESLabel = lv_label_create(cui_confirmPanelYES);
     lv_obj_set_width(cui_confirmPanelYESLabel, LV_SIZE_CONTENT);  /// 1
     lv_obj_set_height(cui_confirmPanelYESLabel, LV_SIZE_CONTENT); /// 1
-    lv_label_set_text(cui_confirmPanelYESLabel, "YES");
+    lv_label_set_text(cui_confirmPanelYESLabel, "是");
     lv_obj_clear_flag(cui_confirmPanelYESLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_confirmPanelYESLabel, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(cui_confirmPanelYESLabel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_confirmPanelYESLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t **children = lv_mem_alloc(sizeof(lv_obj_t *) * _UI_COMP_CONFIRMPANEL_NUM);
     children[UI_COMP_CONFIRMPANEL_CONFIRMPANEL] = cui_confirmPanel;

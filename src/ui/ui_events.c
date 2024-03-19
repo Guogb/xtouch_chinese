@@ -158,11 +158,11 @@ void onNozzleDown(lv_event_t *e)
 void onFilamentUnloadConfirm() { lv_msg_send(XTOUCH_COMMAND_UNLOAD_FILAMENT, NULL); }
 void onFilamentUnload(lv_event_t *e)
 {
-    ui_confirmPanel_show("Please remove\nthe filament after\n" LV_SYMBOL_CUT, onFilamentUnloadConfirm);
+    ui_confirmPanel_show("请在退料后移走\n" LV_SYMBOL_CUT, onFilamentUnloadConfirm);
 }
 
 void onFilamentLoadConfirm() { lv_msg_send(XTOUCH_COMMAND_LOAD_FILAMENT, NULL); }
 void onFilamentLoad(lv_event_t *e)
 {
-    ui_confirmPanel_show(LV_SYMBOL_PLAY " Load new Filament\n" LV_SYMBOL_PLAY " into the Printer\n\n" LV_SYMBOL_OK " Tap YES to continue", onFilamentLoadConfirm);
+    ui_confirmPanel_show(LV_SYMBOL_PLAY " 进料\n"  LV_SYMBOL_OK "点击 是 继续", onFilamentLoadConfirm);
 }

@@ -10,7 +10,7 @@ bool xtouch_sdcard_setup()
 {
     if (!SD.begin())
     {
-        lv_label_set_text(introScreenCaption, LV_SYMBOL_SD_CARD " INSERT SD CARD");
+        lv_label_set_text(introScreenCaption, LV_SYMBOL_SD_CARD " 请插入 SD 卡");
         lv_obj_set_style_text_color(introScreenCaption, lv_color_hex(0xFF0000), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_timer_handler();
 

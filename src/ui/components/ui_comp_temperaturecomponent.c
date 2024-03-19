@@ -593,11 +593,11 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_set_height(cui_temperatureComponentPartFanLabel, LV_SIZE_CONTENT); /// 1
     lv_obj_set_flex_grow(cui_temperatureComponentPartFanLabel, 1);
     lv_obj_set_align(cui_temperatureComponentPartFanLabel, LV_ALIGN_CENTER);
-    lv_label_set_text(cui_temperatureComponentPartFanLabel, "PART");
+    lv_label_set_text(cui_temperatureComponentPartFanLabel, "零件");
     lv_obj_clear_flag(cui_temperatureComponentPartFanLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentPartFanLabel, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentPartFanLabel, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentPartFanLabel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentPartFanLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentPartFanValue;
     cui_temperatureComponentPartFanValue = lv_label_create(cui_temperatureComponentPartFan);
@@ -609,7 +609,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentPartFanValue, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentPartFanValue, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentPartFanValue, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentPartFanValue, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentPartFanValue, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentPartFanInput;
     cui_temperatureComponentPartFanInput = lv_textarea_create(cui_temperatureComponentPartFan);
@@ -684,11 +684,11 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_set_height(cui_temperatureComponentAuxFanLabel, LV_SIZE_CONTENT); /// 1
     lv_obj_set_flex_grow(cui_temperatureComponentAuxFanLabel, 1);
     lv_obj_set_align(cui_temperatureComponentAuxFanLabel, LV_ALIGN_CENTER);
-    lv_label_set_text(cui_temperatureComponentAuxFanLabel, "AUX");
+    lv_label_set_text(cui_temperatureComponentAuxFanLabel, "辅助");
     lv_obj_clear_flag(cui_temperatureComponentAuxFanLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentAuxFanLabel, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentAuxFanLabel, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanLabel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentAuxFanValue;
     cui_temperatureComponentAuxFanValue = lv_label_create(cui_temperatureComponentAuxFan);
@@ -700,7 +700,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentAuxFanValue, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentAuxFanValue, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentAuxFanValue, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanValue, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanValue, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentAuxFanInput;
     cui_temperatureComponentAuxFanInput = lv_textarea_create(cui_temperatureComponentAuxFan);
@@ -775,11 +775,11 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_set_height(cui_temperatureComponentChamberFanLabel, LV_SIZE_CONTENT); /// 1
     lv_obj_set_flex_grow(cui_temperatureComponentChamberFanLabel, 1);
     lv_obj_set_align(cui_temperatureComponentChamberFanLabel, LV_ALIGN_CENTER);
-    lv_label_set_text(cui_temperatureComponentChamberFanLabel, "CHAMBER");
+    lv_label_set_text(cui_temperatureComponentChamberFanLabel, "机箱");
     lv_obj_clear_flag(cui_temperatureComponentChamberFanLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentChamberFanLabel, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentChamberFanLabel, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanLabel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentChamberFanValue;
     cui_temperatureComponentChamberFanValue = lv_label_create(cui_temperatureComponentChamberFan);
@@ -791,7 +791,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentChamberFanValue, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentChamberFanValue, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentChamberFanValue, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanValue, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanValue, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentChamberFanInput;
     cui_temperatureComponentChamberFanInput = lv_textarea_create(cui_temperatureComponentChamberFan);
@@ -846,7 +846,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_set_x(cui_numpadInput, 26);
     lv_obj_set_y(cui_numpadInput, 95);
     lv_textarea_set_max_length(cui_numpadInput, 3);
-    lv_textarea_set_placeholder_text(cui_numpadInput, "Placeholder...");
+    lv_textarea_set_placeholder_text(cui_numpadInput, "请输入...");
     lv_textarea_set_one_line(cui_numpadInput, true);
     lv_obj_add_flag(cui_numpadInput, LV_OBJ_FLAG_HIDDEN);                                                                                                                                                                                                                                 /// Flags
     lv_obj_clear_flag(cui_numpadInput, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags

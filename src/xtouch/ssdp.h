@@ -229,8 +229,8 @@ void xtouch_ssdp_onButtonTimer(lv_timer_t *timer)
     else
     {
         xtouch_ssdp_search_count++;
-        String a = String(LV_SYMBOL_CHARGE " Printer Search. Please wait...(") + xtouch_ssdp_search_count + ")";
-        lv_roller_set_options(ui_printerPairScreenRoller, LV_SYMBOL_CHARGE " Printer Search. Please wait...", LV_ROLLER_MODE_NORMAL);
+        String a = String(LV_SYMBOL_CHARGE " 正在搜索打印机，请等待...(") + xtouch_ssdp_search_count + ")";
+        lv_roller_set_options(ui_printerPairScreenRoller, LV_SYMBOL_CHARGE " 正在搜索打印机，请等待...", LV_ROLLER_MODE_NORMAL);
         xtouch_ssdp_setupButtonTimer();
     }
 }

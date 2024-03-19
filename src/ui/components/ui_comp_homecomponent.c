@@ -669,7 +669,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
     lv_label_set_text(cui_mainScreenTimeLeft, "N/A");
     lv_obj_clear_flag(cui_mainScreenTimeLeft, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_mainScreenTimeLeft, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(cui_mainScreenTimeLeft, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_mainScreenTimeLeft, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_mainScreenController2;
     cui_mainScreenController2 = lv_obj_create(cui_mainScreenPlayer);
@@ -712,7 +712,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
     lv_label_set_text(cui_mainScreenLayer, "100/255");
     lv_obj_clear_flag(cui_mainScreenLayer, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_mainScreenLayer, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(cui_mainScreenLayer, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_mainScreenLayer, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_mainScreenCentral;
     cui_mainScreenCentral = lv_obj_create(cui_mainScreenLeft);
@@ -747,7 +747,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_mainScreenSpeedDropDown;
     cui_mainScreenSpeedDropDown = lv_dropdown_create(cui_mainScreenCentral);
-    lv_dropdown_set_options(cui_mainScreenSpeedDropDown, "Silent\nStandard\nSport\nLudicrous");
+    lv_dropdown_set_options(cui_mainScreenSpeedDropDown, "静音模式\n标准模式\n运动模式\n狂暴模式");
     lv_obj_set_width(cui_mainScreenSpeedDropDown, 150);
     lv_obj_set_height(cui_mainScreenSpeedDropDown, LV_SIZE_CONTENT);           /// 1
     lv_obj_add_state(cui_mainScreenSpeedDropDown, LV_STATE_PRESSED);           /// States
