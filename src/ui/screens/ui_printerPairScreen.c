@@ -29,9 +29,9 @@ void ui_printerPairScreen_screen_init(void)
     ui_printerPairScreenCaption = lv_label_create(ui_printerPairScreen);
     lv_obj_set_height(ui_printerPairScreenCaption, 50);
     lv_obj_set_width(ui_printerPairScreenCaption, lv_pct(100));
-    lv_label_set_text(ui_printerPairScreenCaption, "Pair Printer");
+    lv_label_set_text(ui_printerPairScreenCaption, "打印机配对");
     lv_obj_set_style_text_align(ui_printerPairScreenCaption, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_printerPairScreenCaption, &lv_font_montserrat_28, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_printerPairScreenCaption, &ui_font_chinese_28, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui_printerPairScreenCaption, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui_printerPairScreenCaption, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui_printerPairScreenCaption, 8, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -40,12 +40,12 @@ void ui_printerPairScreen_screen_init(void)
     // lv_obj_t *ui_printerPairScreenRoller;
     ui_printerPairScreenRoller = lv_roller_create(ui_printerPairScreen);
 
-    lv_roller_set_options(ui_printerPairScreenRoller, LV_SYMBOL_CHARGE " Searching for Printers...", LV_ROLLER_MODE_NORMAL);
+    lv_roller_set_options(ui_printerPairScreenRoller, LV_SYMBOL_CHARGE " 搜索打印机...", LV_ROLLER_MODE_NORMAL);
     lv_obj_set_width(ui_printerPairScreenRoller, lv_pct(100));
     lv_obj_set_flex_grow(ui_printerPairScreenRoller, 5);
     lv_obj_set_x(ui_printerPairScreenRoller, 344);
     lv_obj_set_y(ui_printerPairScreenRoller, 193);
-    lv_obj_set_style_text_font(ui_printerPairScreenRoller, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_printerPairScreenRoller, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui_printerPairScreenRoller, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui_printerPairScreenRoller, lv_color_hex(0x444444), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_printerPairScreenRoller, 255, LV_PART_MAIN | LV_STATE_DEFAULT);

@@ -83,7 +83,7 @@ def post_build_create_ota_json(version_value):
         f"../xtouch-bin/ota/xtouch.{version_value}.bin")
     ota = {
         "version": version_value,
-        "url": f"http://xperiments.in/xtouch-bin/ota/xtouch.{version_value}.bin",
+        "url": f"https://ota.okraworks.cn/xtouch-bin/ota/xtouch.{version_value}.bin",
         "md5": md5,
     }
 
